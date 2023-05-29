@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        // Install the Maven version configured as "M3" and add it to the path.
+        // Install the NodeJS version configured as "nodejs" and add it to the path.
         nodejs "nodejs"
     }
 
@@ -12,7 +12,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 git 'https://github.com/pananthareddy/node-hello.git'
 
-                // Run Maven on a Unix agent.
+                // Run Nodejs on a Unix agent.
                 sh "npm install"
 
                 }
